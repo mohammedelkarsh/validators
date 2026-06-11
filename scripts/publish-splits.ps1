@@ -4,7 +4,6 @@ param(
     [string]$Owner = "mohammedelkarsh"
 )
 
-$ErrorActionPreference = "Stop"
 $root = Split-Path -Parent $PSScriptRoot
 Set-Location $root
 
@@ -14,12 +13,14 @@ foreach ($package in $packages) {
     $branch = "split/$package"
     $remote = "https://github.com/$Owner/validators-$package.git"
     $prefix = "packages/$package"
+    $repo = "$Owner/validators-$package"
 
     Write-Host "Splitting $prefix ..."
     git subtree split --prefix=$prefix -b $branch
 
-    if (-not (gh repo view "$Owner/validators-$package" 2>$null)) {
-        gh repo create "$Owner/validators-$package" --public --description "validators/$package — see monorepo for development."
+    gh repo view $repo 1>$null 2>$null
+    if ($LASTEXITCODE -ne 0) {
+        gh repo create $repo --public --description "validators/$package split package."
     }
 
     Write-Host "Pushing $remote ..."
@@ -30,5 +31,6 @@ foreach ($package in $packages) {
 
 Write-Host "Done. Submit each split repo on Packagist:"
 foreach ($package in $packages) {
-    Write-Host "  https://github.com/$Owner/validators-$package"
+    $url = "https://github.com/$Owner/validators-$package"
+    Write-Host "  $url"
 }
