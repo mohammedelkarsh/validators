@@ -12,8 +12,12 @@
     },
     "require-dev": {
         "phpunit/phpunit": "^11.5",
-        "validators/codeigniter": "@dev",
-        "validators/laravel": "@dev"
+        "validators/codeigniter-sa": "@dev",
+        "validators/codeigniter-eg": "@dev",
+        "validators/codeigniter-ae": "@dev",
+        "validators/laravel-sa": "@dev",
+        "validators/laravel-eg": "@dev",
+        "validators/laravel-ae": "@dev"
     },
     "repositories": [
         {
@@ -34,11 +38,27 @@
         },
         {
             "type": "path",
-            "url": "packages/laravel"
+            "url": "packages/laravel-sa"
         },
         {
             "type": "path",
-            "url": "packages/codeigniter"
+            "url": "packages/laravel-eg"
+        },
+        {
+            "type": "path",
+            "url": "packages/laravel-ae"
+        },
+        {
+            "type": "path",
+            "url": "packages/codeigniter-sa"
+        },
+        {
+            "type": "path",
+            "url": "packages/codeigniter-eg"
+        },
+        {
+            "type": "path",
+            "url": "packages/codeigniter-ae"
         }
     ],
     "scripts": {

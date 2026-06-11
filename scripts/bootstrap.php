@@ -16,8 +16,12 @@ spl_autoload_register(static function (string $class) use ($root): void {
         'Validators\\Sa\\' => $root.'/packages/sa/src/',
         'Validators\\Eg\\' => $root.'/packages/eg/src/',
         'Validators\\Ae\\' => $root.'/packages/ae/src/',
-        'Validators\\Laravel\\' => $root.'/packages/laravel/src/',
-        'Validators\\CodeIgniter\\' => $root.'/packages/codeigniter/src/',
+        'Validators\\LaravelSa\\' => $root.'/packages/laravel-sa/src/',
+        'Validators\\LaravelEg\\' => $root.'/packages/laravel-eg/src/',
+        'Validators\\LaravelAe\\' => $root.'/packages/laravel-ae/src/',
+        'Validators\\CodeIgniterSa\\' => $root.'/packages/codeigniter-sa/src/',
+        'Validators\\CodeIgniterEg\\' => $root.'/packages/codeigniter-eg/src/',
+        'Validators\\CodeIgniterAe\\' => $root.'/packages/codeigniter-ae/src/',
     ];
 
     foreach ($map as $prefix => $base) {

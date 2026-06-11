@@ -1,0 +1,26 @@
+{
+    "name": "validators/codeigniter-ae",
+    "description": "CodeIgniter 4 validation rules for UAE validators.",
+    "version": "1.0.2",
+    "type": "library",
+    "license": "MIT",
+    "homepage": "https://github.com/mohammedelkarsh/validators",
+    "support": {
+        "issues": "https://github.com/mohammedelkarsh/validators/issues",
+        "source": "https://github.com/mohammedelkarsh/validators"
+    },
+    "require": {
+        "php": "^8.2",
+        "validators/ae": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Validators\\CodeIgniterAe\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Validators\\CodeIgniterAe\\Tests\\": "tests/"
+        }
+    }
+}

@@ -1,0 +1,35 @@
+{
+    "name": "validators/laravel-sa",
+    "description": "Laravel validation rules for Saudi Arabia validators.",
+    "version": "1.0.2",
+    "type": "library",
+    "license": "MIT",
+    "homepage": "https://github.com/mohammedelkarsh/validators",
+    "support": {
+        "issues": "https://github.com/mohammedelkarsh/validators/issues",
+        "source": "https://github.com/mohammedelkarsh/validators"
+    },
+    "require": {
+        "php": "^8.2",
+        "illuminate/support": "^10.0|^11.0|^12.0|^13.0",
+        "illuminate/validation": "^10.0|^11.0|^12.0|^13.0",
+        "validators/sa": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Validators\\LaravelSa\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Validators\\LaravelSa\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Validators\\LaravelSa\\ValidatorsServiceProvider"
+            ]
+        }
+    }
+}

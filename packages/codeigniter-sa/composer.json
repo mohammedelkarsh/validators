@@ -1,0 +1,26 @@
+{
+    "name": "validators/codeigniter-sa",
+    "description": "CodeIgniter 4 validation rules for Saudi Arabia validators.",
+    "version": "1.0.2",
+    "type": "library",
+    "license": "MIT",
+    "homepage": "https://github.com/mohammedelkarsh/validators",
+    "support": {
+        "issues": "https://github.com/mohammedelkarsh/validators/issues",
+        "source": "https://github.com/mohammedelkarsh/validators"
+    },
+    "require": {
+        "php": "^8.2",
+        "validators/sa": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Validators\\CodeIgniterSa\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Validators\\CodeIgniterSa\\Tests\\": "tests/"
+        }
+    }
+}

@@ -1,13 +1,17 @@
 # Publish monorepo packages to split GitHub repos (required for Packagist.org).
 param(
-    [string]$Version = "v1.0.1",
+    [string]$Version = "v1.0.2",
     [string]$Owner = "mohammedelkarsh"
 )
 
 $root = Split-Path -Parent $PSScriptRoot
 Set-Location $root
 
-$packages = @("core", "sa", "eg", "ae", "laravel", "codeigniter")
+$packages = @(
+    "core", "sa", "eg", "ae",
+    "laravel-sa", "laravel-eg", "laravel-ae",
+    "codeigniter-sa", "codeigniter-eg", "codeigniter-ae"
+)
 
 foreach ($package in $packages) {
     $branch = "split/$package"
@@ -34,3 +38,8 @@ foreach ($package in $packages) {
     $url = "https://github.com/$Owner/validators-$package"
     Write-Host "  $url"
 }
+
+Write-Host ""
+Write-Host "Deprecated (delete from Packagist if present): validators/laravel, validators/codeigniter"
+Write-Host "  https://github.com/$Owner/validators-laravel"
+Write-Host "  https://github.com/$Owner/validators-codeigniter"

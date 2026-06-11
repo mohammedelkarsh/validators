@@ -6,113 +6,80 @@ Country-specific PHP validators. Install only the packages you need.
 
 | Package | Description |
 |---------|-------------|
-| `validators/core` | Shared primitives (normalization, results, checksum helpers) |
+| `validators/core` | Shared primitives |
 | `validators/sa` | Saudi Arabia: national ID, mobile, IBAN |
 | `validators/eg` | Egypt: national ID |
 | `validators/ae` | UAE: Emirates ID, mobile, IBAN |
-| `validators/laravel` | Laravel validation rules |
-| `validators/codeigniter` | CodeIgniter 4 rule callables |
+| `validators/laravel-sa` | Laravel rules for Saudi Arabia |
+| `validators/laravel-eg` | Laravel rules for Egypt |
+| `validators/laravel-ae` | Laravel rules for UAE |
+| `validators/codeigniter-sa` | CodeIgniter rules for Saudi Arabia |
+| `validators/codeigniter-eg` | CodeIgniter rules for Egypt |
+| `validators/codeigniter-ae` | CodeIgniter rules for UAE |
 
 ## Installation
 
-Published on [Packagist](https://packagist.org) as separate packages (split from this monorepo):
+### Saudi Laravel project
 
 ```bash
-# Saudi Arabia
-composer require validators/core validators/sa
-
-# Egypt
-composer require validators/core validators/eg
-
-# UAE
-composer require validators/core validators/ae
-
-# Framework adapters (optional)
-composer require validators/laravel
+composer require validators/laravel-sa
 ```
 
-## Plain PHP
+Installs only `validators/laravel-sa`, `validators/sa`, and `validators/core`.
+
+```php
+$request->validate([
+    'national_id' => 'required|saudi_national_id',
+    'mobile' => 'required|saudi_mobile',
+    'iban' => 'required|saudi_iban',
+]);
+```
+
+### Plain PHP (Saudi only)
+
+```bash
+composer require validators/sa
+```
+
+### Egypt / UAE
+
+```bash
+composer require validators/laravel-eg
+composer require validators/laravel-ae
+```
+
+## Plain PHP API
 
 ```php
 use Validators\Sa\SaudiNationalId;
-use Validators\Sa\IdentityType;
 
 $result = SaudiNationalId::check('1001244080');
+$result->errorKey();
+$result->firstError();
 
-$result->isValid();      // false
-$result->errorKey();     // sa.national_id.invalid_checksum
-$result->firstError();   // English fallback for logs or default UI
-
-// Generate valid test data
 SaudiNationalId::fake();
-SaudiNationalId::fake(IdentityType::Citizen);
-SaudiMobile::fake();
-SaudiIban::fake();
-EgyptianNationalId::fake();
-EmiratesId::fake();
-UaeMobile::fake();
-UaeIban::fake();
 ```
 
-Translate `errorKey()` in your application in any language you need.
-
-`::fake()` generates values that pass format and checksum validation. Use it in tests, seeders, and local development — not as real identity data.
-
-## Laravel
-
-### String rules (quick setup)
-
-Register the service provider, then use rule aliases:
+## Laravel rule objects
 
 ```php
-$request->validate([
-    'saudi_id' => 'required|saudi_national_id',
-    'egyptian_id' => 'required|egyptian_national_id',
-    'emirates_id' => 'required|emirates_id',
-    'uae_mobile' => 'required|uae_mobile',
-    'uae_iban' => 'required|uae_iban',
-]);
+use Validators\LaravelSa\Rules\SaudiNationalId;
+
+'saudi_id' => ['required', new SaudiNationalId()],
 ```
-
-String rules return a generic translated message per validator (for example `validators::sa.national_id.invalid`).
-
-### Rule objects (specific errors)
-
-For field-specific error messages, use the rule classes:
-
-```php
-use Validators\Laravel\Rules\SaudiNationalId;
-
-$request->validate([
-    'saudi_id' => ['required', new SaudiNationalId()],
-]);
-```
-
-Rule objects return the specific error (checksum, length, prefix, etc.) via `ValidationMessage::translate()`.
-
-Publish or override translations under `lang/{locale}/validators.php`. English defaults ship with the package.
 
 ## CodeIgniter 4
 
 ```php
+// Saudi project only
 public array $ruleSets = [
-    \Validators\CodeIgniter\SaRules::class,
-    \Validators\CodeIgniter\EgRules::class,
-    \Validators\CodeIgniter\AeRules::class,
+    \Validators\CodeIgniterSa\SaRules::class,
 ];
 ```
 
-Failed rules set `$error` to an `errorKey()` string (for example `sa.national_id.invalid_checksum`). Translate that key in your application.
-
-## Disclaimer
-
-These packages perform **format and checksum validation only**. They do not verify identity against government systems.
-
-Emirates ID strict mode uses Luhn checksum. Some real IDs may fail strict mode; use `EmiratesId::check($value, strict: false)` for format-only validation.
-
 ## Packagist
 
-Packagist.org does not install packages from monorepo subdirectories. Each package is mirrored to its own repository:
+Submit each split repository (not the monorepo):
 
 | Composer package | GitHub repo |
 |------------------|-------------|
@@ -120,12 +87,18 @@ Packagist.org does not install packages from monorepo subdirectories. Each packa
 | `validators/sa` | [validators-sa](https://github.com/mohammedelkarsh/validators-sa) |
 | `validators/eg` | [validators-eg](https://github.com/mohammedelkarsh/validators-eg) |
 | `validators/ae` | [validators-ae](https://github.com/mohammedelkarsh/validators-ae) |
-| `validators/laravel` | [validators-laravel](https://github.com/mohammedelkarsh/validators-laravel) |
-| `validators/codeigniter` | [validators-codeigniter](https://github.com/mohammedelkarsh/validators-codeigniter) |
+| `validators/laravel-sa` | [validators-laravel-sa](https://github.com/mohammedelkarsh/validators-laravel-sa) |
+| `validators/laravel-eg` | [validators-laravel-eg](https://github.com/mohammedelkarsh/validators-laravel-eg) |
+| `validators/laravel-ae` | [validators-laravel-ae](https://github.com/mohammedelkarsh/validators-laravel-ae) |
+| `validators/codeigniter-sa` | [validators-codeigniter-sa](https://github.com/mohammedelkarsh/validators-codeigniter-sa) |
+| `validators/codeigniter-eg` | [validators-codeigniter-eg](https://github.com/mohammedelkarsh/validators-codeigniter-eg) |
+| `validators/codeigniter-ae` | [validators-codeigniter-ae](https://github.com/mohammedelkarsh/validators-codeigniter-ae) |
+
+**Removed:** `validators/laravel` and `validators/codeigniter` (installed all countries). Delete them from Packagist if you added them.
 
 Re-publish after a release:
 
-```bash
+```powershell
 powershell -File scripts/publish-splits.ps1 -Version v1.0.2
 ```
 
@@ -137,16 +110,9 @@ composer install
 composer test:all
 ```
 
-Individual suites:
+## Disclaimer
 
-```bash
-composer test              # PHPUnit
-composer test:smoke        # Quick sanity check
-composer test:audit        # Error keys, vectors, fake()
-composer test:comprehensive
-composer test:extra
-composer test:exhaustive
-```
+Format and checksum validation only — not government verification.
 
 ## License
 

@@ -2,6 +2,19 @@
 
 All notable changes to this project are documented here.
 
+## [1.0.2] - 2026-06-11
+
+### Changed
+
+- **Breaking:** Replace `validators/laravel` with `validators/laravel-sa`, `validators/laravel-eg`, `validators/laravel-ae`
+- **Breaking:** Replace `validators/codeigniter` with country-specific CodeIgniter packages
+- Saudi Laravel apps now install only SA dependencies via `composer require validators/laravel-sa`
+
+### Removed
+
+- `validators/laravel`
+- `validators/codeigniter`
+
 ## [1.0.1] - 2026-06-11
 
 ### Changed

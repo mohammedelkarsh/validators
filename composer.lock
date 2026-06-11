@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7c30cce293ce3e67943edfac8dc6891f",
+    "content-hash": "2752fd28baaee14267a203a3bd439289",
     "packages": [
         {
             "name": "validators/ae",
@@ -4179,34 +4179,32 @@
             "time": "2025-11-17T20:03:58+00:00"
         },
         {
-            "name": "validators/codeigniter",
-            "version": "1.0.1",
+            "name": "validators/codeigniter-ae",
+            "version": "1.0.2",
             "dist": {
                 "type": "path",
-                "url": "packages/codeigniter",
-                "reference": "43ed6f576ea1c55ce8d40710d0d36e2d17f9504a"
+                "url": "packages/codeigniter-ae",
+                "reference": "951844530431dc8ab4555922b8018341ded37027"
             },
             "require": {
                 "php": "^8.2",
-                "validators/ae": "^1.0",
-                "validators/eg": "^1.0",
-                "validators/sa": "^1.0"
+                "validators/ae": "^1.0"
             },
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Validators\\CodeIgniter\\": "src/"
+                    "Validators\\CodeIgniterAe\\": "src/"
                 }
             },
             "autoload-dev": {
                 "psr-4": {
-                    "Validators\\CodeIgniter\\Tests\\": "tests/"
+                    "Validators\\CodeIgniterAe\\Tests\\": "tests/"
                 }
             },
             "license": [
                 "MIT"
             ],
-            "description": "CodeIgniter 4 validation rules for country-specific validator packages.",
+            "description": "CodeIgniter 4 validation rules for UAE validators.",
             "homepage": "https://github.com/mohammedelkarsh/validators",
             "support": {
                 "issues": "https://github.com/mohammedelkarsh/validators/issues",
@@ -4217,43 +4215,203 @@
             }
         },
         {
-            "name": "validators/laravel",
-            "version": "1.0.1",
+            "name": "validators/codeigniter-eg",
+            "version": "1.0.2",
             "dist": {
                 "type": "path",
-                "url": "packages/laravel",
-                "reference": "1ad896f937182c42f4d8a1cfb1d4f23f495c8ffb"
+                "url": "packages/codeigniter-eg",
+                "reference": "8cd3bd1edaad48170660a1b819cd1856881fd9c3"
+            },
+            "require": {
+                "php": "^8.2",
+                "validators/eg": "^1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Validators\\CodeIgniterEg\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Validators\\CodeIgniterEg\\Tests\\": "tests/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "CodeIgniter 4 validation rules for Egypt validators.",
+            "homepage": "https://github.com/mohammedelkarsh/validators",
+            "support": {
+                "issues": "https://github.com/mohammedelkarsh/validators/issues",
+                "source": "https://github.com/mohammedelkarsh/validators"
+            },
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "validators/codeigniter-sa",
+            "version": "1.0.2",
+            "dist": {
+                "type": "path",
+                "url": "packages/codeigniter-sa",
+                "reference": "bd98b7438c502e632692f58a4bf91cc49258aa1a"
+            },
+            "require": {
+                "php": "^8.2",
+                "validators/sa": "^1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Validators\\CodeIgniterSa\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Validators\\CodeIgniterSa\\Tests\\": "tests/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "CodeIgniter 4 validation rules for Saudi Arabia validators.",
+            "homepage": "https://github.com/mohammedelkarsh/validators",
+            "support": {
+                "issues": "https://github.com/mohammedelkarsh/validators/issues",
+                "source": "https://github.com/mohammedelkarsh/validators"
+            },
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "validators/laravel-ae",
+            "version": "1.0.2",
+            "dist": {
+                "type": "path",
+                "url": "packages/laravel-ae",
+                "reference": "74ebec3c2ebd6ea8760e23af3621b62e730a2233"
             },
             "require": {
                 "illuminate/support": "^10.0|^11.0|^12.0|^13.0",
                 "illuminate/validation": "^10.0|^11.0|^12.0|^13.0",
                 "php": "^8.2",
-                "validators/ae": "^1.0",
-                "validators/eg": "^1.0",
+                "validators/ae": "^1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Validators\\LaravelAe\\ValidatorsServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Validators\\LaravelAe\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Validators\\LaravelAe\\Tests\\": "tests/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "Laravel validation rules for UAE validators.",
+            "homepage": "https://github.com/mohammedelkarsh/validators",
+            "support": {
+                "issues": "https://github.com/mohammedelkarsh/validators/issues",
+                "source": "https://github.com/mohammedelkarsh/validators"
+            },
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "validators/laravel-eg",
+            "version": "1.0.2",
+            "dist": {
+                "type": "path",
+                "url": "packages/laravel-eg",
+                "reference": "aac4bfb8c4012d64b1ec5d0c47c850af964bb5af"
+            },
+            "require": {
+                "illuminate/support": "^10.0|^11.0|^12.0|^13.0",
+                "illuminate/validation": "^10.0|^11.0|^12.0|^13.0",
+                "php": "^8.2",
+                "validators/eg": "^1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Validators\\LaravelEg\\ValidatorsServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Validators\\LaravelEg\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Validators\\LaravelEg\\Tests\\": "tests/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "Laravel validation rules for Egypt validators.",
+            "homepage": "https://github.com/mohammedelkarsh/validators",
+            "support": {
+                "issues": "https://github.com/mohammedelkarsh/validators/issues",
+                "source": "https://github.com/mohammedelkarsh/validators"
+            },
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "validators/laravel-sa",
+            "version": "1.0.2",
+            "dist": {
+                "type": "path",
+                "url": "packages/laravel-sa",
+                "reference": "a6c2c85f0e77abbcdd3c02876233c9776a8aecc6"
+            },
+            "require": {
+                "illuminate/support": "^10.0|^11.0|^12.0|^13.0",
+                "illuminate/validation": "^10.0|^11.0|^12.0|^13.0",
+                "php": "^8.2",
                 "validators/sa": "^1.0"
             },
             "type": "library",
             "extra": {
                 "laravel": {
                     "providers": [
-                        "Validators\\Laravel\\ValidatorsServiceProvider"
+                        "Validators\\LaravelSa\\ValidatorsServiceProvider"
                     ]
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "Validators\\Laravel\\": "src/"
+                    "Validators\\LaravelSa\\": "src/"
                 }
             },
             "autoload-dev": {
                 "psr-4": {
-                    "Validators\\Laravel\\Tests\\": "tests/"
+                    "Validators\\LaravelSa\\Tests\\": "tests/"
                 }
             },
             "license": [
                 "MIT"
             ],
-            "description": "Laravel validation rules for country-specific validator packages.",
+            "description": "Laravel validation rules for Saudi Arabia validators.",
             "homepage": "https://github.com/mohammedelkarsh/validators",
             "support": {
                 "issues": "https://github.com/mohammedelkarsh/validators/issues",
@@ -4342,10 +4500,14 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "validators/ae": 20,
-        "validators/codeigniter": 20,
+        "validators/codeigniter-ae": 20,
+        "validators/codeigniter-eg": 20,
+        "validators/codeigniter-sa": 20,
         "validators/core": 20,
         "validators/eg": 20,
-        "validators/laravel": 20,
+        "validators/laravel-ae": 20,
+        "validators/laravel-eg": 20,
+        "validators/laravel-sa": 20,
         "validators/sa": 20
     },
     "prefer-stable": true,

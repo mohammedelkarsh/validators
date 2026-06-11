@@ -10,8 +10,12 @@
             <directory>packages/sa/tests</directory>
             <directory>packages/eg/tests</directory>
             <directory>packages/ae/tests</directory>
-            <directory>packages/laravel/tests</directory>
-            <directory>packages/codeigniter/tests</directory>
+            <directory>packages/laravel-sa/tests</directory>
+            <directory>packages/laravel-eg/tests</directory>
+            <directory>packages/laravel-ae/tests</directory>
+            <directory>packages/codeigniter-sa/tests</directory>
+            <directory>packages/codeigniter-eg/tests</directory>
+            <directory>packages/codeigniter-ae/tests</directory>
         </testsuite>
     </testsuites>
     <source>
@@ -20,8 +24,12 @@
             <directory>packages/sa/src</directory>
             <directory>packages/eg/src</directory>
             <directory>packages/ae/src</directory>
-            <directory>packages/laravel/src</directory>
-            <directory>packages/codeigniter/src</directory>
+            <directory>packages/laravel-sa/src</directory>
+            <directory>packages/laravel-eg/src</directory>
+            <directory>packages/laravel-ae/src</directory>
+            <directory>packages/codeigniter-sa/src</directory>
+            <directory>packages/codeigniter-eg/src</directory>
+            <directory>packages/codeigniter-ae/src</directory>
         </include>
     </source>
 </phpunit>
