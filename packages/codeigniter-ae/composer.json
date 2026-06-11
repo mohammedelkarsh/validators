@@ -1,7 +1,6 @@
 {
     "name": "validators/codeigniter-ae",
     "description": "CodeIgniter 4 validation rules for UAE validators.",
-    "version": "1.0.2",
     "type": "library",
     "license": "MIT",
     "homepage": "https://github.com/mohammedelkarsh/validators",

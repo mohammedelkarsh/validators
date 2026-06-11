@@ -1,7 +1,6 @@
 {
     "name": "validators/sa",
     "description": "Saudi Arabia format validators: national ID, iqama, mobile, and IBAN.",
-    "version": "1.0.1",
     "type": "library",
     "license": "MIT",
     "homepage": "https://github.com/mohammedelkarsh/validators",

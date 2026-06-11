@@ -1,7 +1,6 @@
 {
     "name": "validators/codeigniter-sa",
     "description": "CodeIgniter 4 validation rules for Saudi Arabia validators.",
-    "version": "1.0.2",
     "type": "library",
     "license": "MIT",
     "homepage": "https://github.com/mohammedelkarsh/validators",
