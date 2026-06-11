@@ -15,7 +15,7 @@ Country-specific PHP validators. Install only the packages you need.
 
 ## Installation
 
-From [Packagist](https://packagist.org) (after publishing):
+Published on [Packagist](https://packagist.org) as separate packages (split from this monorepo):
 
 ```bash
 # Saudi Arabia
@@ -109,6 +109,25 @@ Failed rules set `$error` to an `errorKey()` string (for example `sa.national_id
 These packages perform **format and checksum validation only**. They do not verify identity against government systems.
 
 Emirates ID strict mode uses Luhn checksum. Some real IDs may fail strict mode; use `EmiratesId::check($value, strict: false)` for format-only validation.
+
+## Packagist
+
+Packagist.org does not install packages from monorepo subdirectories. Each package is mirrored to its own repository:
+
+| Composer package | GitHub repo |
+|------------------|-------------|
+| `validators/core` | [validators-core](https://github.com/mohammedelkarsh/validators-core) |
+| `validators/sa` | [validators-sa](https://github.com/mohammedelkarsh/validators-sa) |
+| `validators/eg` | [validators-eg](https://github.com/mohammedelkarsh/validators-eg) |
+| `validators/ae` | [validators-ae](https://github.com/mohammedelkarsh/validators-ae) |
+| `validators/laravel` | [validators-laravel](https://github.com/mohammedelkarsh/validators-laravel) |
+| `validators/codeigniter` | [validators-codeigniter](https://github.com/mohammedelkarsh/validators-codeigniter) |
+
+Re-publish after a release:
+
+```bash
+powershell -File scripts/publish-splits.ps1 -Version v1.0.2
+```
 
 ## Development
 
