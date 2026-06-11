@@ -1,0 +1,23 @@
+{
+    "name": "validators/eg",
+    "description": "Egypt validators: national ID.",
+    "version": "1.0.0",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^8.2",
+        "validators/core": "@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "Validators\\Eg\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Validators\\Eg\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

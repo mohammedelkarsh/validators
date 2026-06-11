@@ -1,0 +1,24 @@
+{
+    "valid": [
+        {
+            "input": "1001244084",
+            "type": "citizen"
+        },
+        {
+            "input": "2001244082",
+            "type": "resident"
+        },
+        {
+            "input": "1 001 244 084",
+            "type": "citizen",
+            "normalized": "1001244084"
+        }
+    ],
+    "invalid": [
+        "",
+        "123",
+        "3123456789",
+        "1001244080",
+        "abcdefghij"
+    ]
+}

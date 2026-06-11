@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
+         bootstrap="vendor/autoload.php"
+         colors="true"
+         cacheDirectory=".phpunit.cache">
+    <testsuites>
+        <testsuite name="Validators">
+            <directory>packages/core/tests</directory>
+            <directory>packages/sa/tests</directory>
+            <directory>packages/eg/tests</directory>
+            <directory>packages/ae/tests</directory>
+            <directory>packages/laravel/tests</directory>
+            <directory>packages/codeigniter/tests</directory>
+        </testsuite>
+    </testsuites>
+    <source>
+        <include>
+            <directory>packages/core/src</directory>
+            <directory>packages/sa/src</directory>
+            <directory>packages/eg/src</directory>
+            <directory>packages/ae/src</directory>
+            <directory>packages/laravel/src</directory>
+            <directory>packages/codeigniter/src</directory>
+        </include>
+    </source>
+</phpunit>

@@ -1,0 +1,23 @@
+{
+    "name": "validators/ae",
+    "description": "United Arab Emirates validators: Emirates ID, mobile, and IBAN.",
+    "version": "1.0.0",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^8.2",
+        "validators/core": "@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "Validators\\Ae\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Validators\\Ae\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

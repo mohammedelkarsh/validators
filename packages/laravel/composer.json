@@ -1,0 +1,34 @@
+{
+    "name": "validators/laravel",
+    "description": "Laravel validation rules for country-specific validator packages.",
+    "version": "1.0.0",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^8.2",
+        "illuminate/support": "^10.0|^11.0|^12.0|^13.0",
+        "illuminate/validation": "^10.0|^11.0|^12.0|^13.0",
+        "validators/sa": "@dev",
+        "validators/eg": "@dev",
+        "validators/ae": "@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "Validators\\Laravel\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Validators\\Laravel\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Validators\\Laravel\\ValidatorsServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

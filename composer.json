@@ -1,0 +1,62 @@
+{
+    "name": "validators/monorepo",
+    "description": "Development monorepo for country-specific PHP validators.",
+    "version": "1.0.0",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "^8.2",
+        "validators/core": "@dev",
+        "validators/sa": "@dev",
+        "validators/eg": "@dev",
+        "validators/ae": "@dev"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.5",
+        "validators/codeigniter": "@dev",
+        "validators/laravel": "@dev"
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "packages/core"
+        },
+        {
+            "type": "path",
+            "url": "packages/sa"
+        },
+        {
+            "type": "path",
+            "url": "packages/eg"
+        },
+        {
+            "type": "path",
+            "url": "packages/ae"
+        },
+        {
+            "type": "path",
+            "url": "packages/laravel"
+        },
+        {
+            "type": "path",
+            "url": "packages/codeigniter"
+        }
+    ],
+    "scripts": {
+        "test": "phpunit",
+        "test:smoke": "php scripts/smoke-test.php",
+        "test:audit": "php scripts/audit.php",
+        "test:comprehensive": "php scripts/comprehensive-test.php",
+        "test:extra": "php scripts/extra-scenarios-test.php",
+        "test:exhaustive": "php scripts/exhaustive-test.php",
+        "test:all": [
+            "@test",
+            "@test:smoke",
+            "@test:audit",
+            "@test:comprehensive",
+            "@test:extra",
+            "@test:exhaustive"
+        ]
+    }
+}

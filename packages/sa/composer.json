@@ -1,0 +1,23 @@
+{
+    "name": "validators/sa",
+    "description": "Saudi Arabia format validators: national ID, iqama, mobile, and IBAN.",
+    "version": "1.0.0",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^8.2",
+        "validators/core": "@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "Validators\\Sa\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Validators\\Sa\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

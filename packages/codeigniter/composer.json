@@ -1,0 +1,25 @@
+{
+    "name": "validators/codeigniter",
+    "description": "CodeIgniter 4 validation rules for country-specific validator packages.",
+    "version": "1.0.0",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^8.2",
+        "validators/sa": "@dev",
+        "validators/eg": "@dev",
+        "validators/ae": "@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "Validators\\CodeIgniter\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Validators\\CodeIgniter\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
