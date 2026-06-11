@@ -1,9 +1,14 @@
 {
     "name": "validators/core",
     "description": "Shared validation primitives for country-specific validator packages.",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "type": "library",
     "license": "MIT",
+    "homepage": "https://github.com/mohammedelkarsh/validators",
+    "support": {
+        "issues": "https://github.com/mohammedelkarsh/validators/issues",
+        "source": "https://github.com/mohammedelkarsh/validators"
+    },
     "require": {
         "php": "^8.2"
     },
@@ -16,7 +21,5 @@
         "psr-4": {
             "Validators\\Core\\Tests\\": "tests/"
         }
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    }
 }

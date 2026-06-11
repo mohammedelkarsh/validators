@@ -1,7 +1,5 @@
 {
-    "name": "validators/monorepo",
     "description": "Development monorepo for country-specific PHP validators.",
-    "version": "1.0.0",
     "license": "MIT",
     "minimum-stability": "dev",
     "prefer-stable": true,

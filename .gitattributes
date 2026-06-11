@@ -1,0 +1,8 @@
+# Dev-only paths (not shipped in Composer dist archives)
+/scripts export-ignore
+/spec export-ignore
+/phpunit.xml export-ignore
+/.phpunit.cache export-ignore
+
+# Package test suites (autoload-dev only; keep installs lean)
+/packages/*/tests export-ignore

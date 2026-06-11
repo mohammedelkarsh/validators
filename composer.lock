@@ -4,19 +4,19 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bc32f270c45c178126f10cdde816f72a",
+    "content-hash": "7c30cce293ce3e67943edfac8dc6891f",
     "packages": [
         {
             "name": "validators/ae",
-            "version": "dev-main",
+            "version": "1.0.1",
             "dist": {
                 "type": "path",
                 "url": "packages/ae",
-                "reference": "d1c06ebc14dffdda63cfd7f798f789e40693640e"
+                "reference": "cea1c502b37725fa00739d5149c7984998d4dbbe"
             },
             "require": {
                 "php": "^8.2",
-                "validators/core": "@dev"
+                "validators/core": "^1.0"
             },
             "type": "library",
             "autoload": {
@@ -33,17 +33,22 @@
                 "MIT"
             ],
             "description": "United Arab Emirates validators: Emirates ID, mobile, and IBAN.",
+            "homepage": "https://github.com/mohammedelkarsh/validators",
+            "support": {
+                "issues": "https://github.com/mohammedelkarsh/validators/issues",
+                "source": "https://github.com/mohammedelkarsh/validators"
+            },
             "transport-options": {
                 "relative": true
             }
         },
         {
             "name": "validators/core",
-            "version": "dev-main",
+            "version": "1.0.1",
             "dist": {
                 "type": "path",
                 "url": "packages/core",
-                "reference": "d3b47351a3c44c85a15fa93a044dfe0841a03ea4"
+                "reference": "91de03465a8d174cb1486b9652ed3bbe0a1aaa16"
             },
             "require": {
                 "php": "^8.2"
@@ -63,21 +68,26 @@
                 "MIT"
             ],
             "description": "Shared validation primitives for country-specific validator packages.",
+            "homepage": "https://github.com/mohammedelkarsh/validators",
+            "support": {
+                "issues": "https://github.com/mohammedelkarsh/validators/issues",
+                "source": "https://github.com/mohammedelkarsh/validators"
+            },
             "transport-options": {
                 "relative": true
             }
         },
         {
             "name": "validators/eg",
-            "version": "dev-main",
+            "version": "1.0.1",
             "dist": {
                 "type": "path",
                 "url": "packages/eg",
-                "reference": "20e0183e06515a9985a1ad5c0f7b8d17f3bee132"
+                "reference": "dc28a0895fa2d0bdec498518d9a01c5a6ad0fe3d"
             },
             "require": {
                 "php": "^8.2",
-                "validators/core": "@dev"
+                "validators/core": "^1.0"
             },
             "type": "library",
             "autoload": {
@@ -93,22 +103,27 @@
             "license": [
                 "MIT"
             ],
-            "description": "Egypt validators: national ID (الرقم القومي).",
+            "description": "Egypt validators: national ID.",
+            "homepage": "https://github.com/mohammedelkarsh/validators",
+            "support": {
+                "issues": "https://github.com/mohammedelkarsh/validators/issues",
+                "source": "https://github.com/mohammedelkarsh/validators"
+            },
             "transport-options": {
                 "relative": true
             }
         },
         {
             "name": "validators/sa",
-            "version": "dev-main",
+            "version": "1.0.1",
             "dist": {
                 "type": "path",
                 "url": "packages/sa",
-                "reference": "fe17f5c2055e0cec05319b57c8d867bca0cedd59"
+                "reference": "5d2633c874c9fcbd579dd36acd5a6d96bf00e2c9"
             },
             "require": {
                 "php": "^8.2",
-                "validators/core": "@dev"
+                "validators/core": "^1.0"
             },
             "type": "library",
             "autoload": {
@@ -125,6 +140,11 @@
                 "MIT"
             ],
             "description": "Saudi Arabia format validators: national ID, iqama, mobile, and IBAN.",
+            "homepage": "https://github.com/mohammedelkarsh/validators",
+            "support": {
+                "issues": "https://github.com/mohammedelkarsh/validators/issues",
+                "source": "https://github.com/mohammedelkarsh/validators"
+            },
             "transport-options": {
                 "relative": true
             }
@@ -4160,17 +4180,17 @@
         },
         {
             "name": "validators/codeigniter",
-            "version": "dev-main",
+            "version": "1.0.1",
             "dist": {
                 "type": "path",
                 "url": "packages/codeigniter",
-                "reference": "f6757b974b79d1a4490cde7fb8812fe3422b12be"
+                "reference": "43ed6f576ea1c55ce8d40710d0d36e2d17f9504a"
             },
             "require": {
                 "php": "^8.2",
-                "validators/ae": "@dev",
-                "validators/eg": "@dev",
-                "validators/sa": "@dev"
+                "validators/ae": "^1.0",
+                "validators/eg": "^1.0",
+                "validators/sa": "^1.0"
             },
             "type": "library",
             "autoload": {
@@ -4187,25 +4207,30 @@
                 "MIT"
             ],
             "description": "CodeIgniter 4 validation rules for country-specific validator packages.",
+            "homepage": "https://github.com/mohammedelkarsh/validators",
+            "support": {
+                "issues": "https://github.com/mohammedelkarsh/validators/issues",
+                "source": "https://github.com/mohammedelkarsh/validators"
+            },
             "transport-options": {
                 "relative": true
             }
         },
         {
             "name": "validators/laravel",
-            "version": "dev-main",
+            "version": "1.0.1",
             "dist": {
                 "type": "path",
                 "url": "packages/laravel",
-                "reference": "fcbdc3de4fdaa5e7a0ec9c203104adf803217527"
+                "reference": "1ad896f937182c42f4d8a1cfb1d4f23f495c8ffb"
             },
             "require": {
                 "illuminate/support": "^10.0|^11.0|^12.0|^13.0",
                 "illuminate/validation": "^10.0|^11.0|^12.0|^13.0",
                 "php": "^8.2",
-                "validators/ae": "@dev",
-                "validators/eg": "@dev",
-                "validators/sa": "@dev"
+                "validators/ae": "^1.0",
+                "validators/eg": "^1.0",
+                "validators/sa": "^1.0"
             },
             "type": "library",
             "extra": {
@@ -4229,6 +4254,11 @@
                 "MIT"
             ],
             "description": "Laravel validation rules for country-specific validator packages.",
+            "homepage": "https://github.com/mohammedelkarsh/validators",
+            "support": {
+                "issues": "https://github.com/mohammedelkarsh/validators/issues",
+                "source": "https://github.com/mohammedelkarsh/validators"
+            },
             "transport-options": {
                 "relative": true
             }

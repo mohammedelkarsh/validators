@@ -15,6 +15,8 @@ Country-specific PHP validators. Install only the packages you need.
 
 ## Installation
 
+From [Packagist](https://packagist.org) (after publishing):
+
 ```bash
 # Saudi Arabia
 composer require validators/core validators/sa
