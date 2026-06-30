@@ -2,6 +2,15 @@
 
 All notable changes to this project are documented here.
 
+## [1.0.3] - 2026-07-03
+
+### Added
+
+- Arabic Laravel validation messages (`lang/ar`) for `laravel-sa`, `laravel-eg`, and `laravel-ae`
+- GitHub Actions CI workflow (PHP 8.2, 8.3, 8.4)
+- Packagist badges on package README files
+- Release and topic automation scripts (`create-github-releases.ps1`, `set-github-topics.ps1`)
+
 ## [1.0.2] - 2026-06-11
 
 ### Changed

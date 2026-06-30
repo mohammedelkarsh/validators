@@ -1,5 +1,9 @@
 # Validators
 
+[![Tests](https://github.com/mohammedelkarsh/validators/actions/workflows/tests.yml/badge.svg)](https://github.com/mohammedelkarsh/validators/actions/workflows/tests.yml)
+[![Packagist](https://img.shields.io/badge/Packagist-validators%2Fcore-blue)](https://packagist.org/users/mohammedelkarsh/packages/)
+[![License](https://img.shields.io/github/license/mohammedelkarsh/validators)](LICENSE)
+
 Country-specific PHP validators. Install only the packages you need.
 
 ## Packages
@@ -68,6 +72,15 @@ use Validators\LaravelSa\Rules\SaudiNationalId;
 'saudi_id' => ['required', new SaudiNationalId()],
 ```
 
+## Laravel Arabic translations
+
+Laravel adapter packages ship `lang/ar/validation.php`. Set your app locale to `ar`:
+
+```php
+// config/app.php
+'locale' => 'ar',
+```
+
 ## CodeIgniter 4
 
 ```php
@@ -99,7 +112,7 @@ Submit each split repository (not the monorepo):
 Re-publish after a release:
 
 ```powershell
-powershell -File scripts/publish-splits.ps1 -Version v1.0.2
+powershell -File scripts/publish-splits.ps1 -Version v1.0.3
 ```
 
 ## Development

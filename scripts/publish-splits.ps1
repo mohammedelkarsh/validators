@@ -1,6 +1,6 @@
 # Publish monorepo packages to split GitHub repos (required for Packagist.org).
 param(
-    [string]$Version = "v1.0.2",
+    [string]$Version = "v1.0.3",
     [string]$Owner = "mohammedelkarsh"
 )
 
@@ -38,6 +38,10 @@ foreach ($package in $packages) {
     $url = "https://github.com/$Owner/validators-$package"
     Write-Host "  $url"
 }
+
+Write-Host ""
+Write-Host "Creating GitHub Releases (version badge on repo page) ..."
+powershell -File (Join-Path $PSScriptRoot "create-github-releases.ps1") -Version $Version -Owner $Owner
 
 Write-Host ""
 Write-Host "Deprecated (delete from Packagist if present): validators/laravel, validators/codeigniter"
